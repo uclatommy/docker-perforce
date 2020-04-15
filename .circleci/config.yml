@@ -11,4 +11,4 @@ jobs:
           command: docker-compose build
       - run:
           name: Push to Docker Hub
-          command: ./dockerpush
+          command: chmod +x dockerpush && ./dockerpush
