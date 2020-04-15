@@ -1,0 +1,7 @@
+#!/bin/bash
+
+VERSION=0.1
+APP_NAME="docker-perforce"
+docker login -u ${DOCKER_USER} --password-stdin <<< "${DOCKER_PASS}"
+docker tag ${APP_NAME}:latest ${DOCKER_USER}/${APP_NAME}:${VERSION}
+docker push ${DOCKER_USER}/${APP_NAME}:${VERSION}

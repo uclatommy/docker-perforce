@@ -1,0 +1,10 @@
+version: "3"
+services:
+  p4d_svc:
+    container_name: perforce-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: docker-perforce
+    ports:
+      - 5000:5000

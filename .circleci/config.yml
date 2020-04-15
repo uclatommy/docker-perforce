@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    machine:
+      image: circleci/classic:latest
+    working_directory: ~/docker-perforce
+    steps:
+      - checkout
+      - run:
+          name: Build Environment
+          command: docker-compose build
+#      - run:
+#          name: Push to Docker Hub
+#          command: ./dockerpush

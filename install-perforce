@@ -1,0 +1,14 @@
+#!/bin/sh
+
+apt-get update
+chmod +x p4d
+mv p4d /usr/local/bin
+adduser perforce
+mkdir /perforce_depot
+chown perforce /perforce_depot
+mkdir /var/log/perforce
+chown perforce /var/log/perforce
+apt-get install daemon
+cd /etc/init.d
+chmod +x /etc/init.d/p4dservice
+update-rc.d p4dservice defaults
