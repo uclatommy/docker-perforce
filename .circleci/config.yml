@@ -9,6 +9,6 @@ jobs:
       - run:
           name: Build Environment
           command: docker-compose build
-#      - run:
-#          name: Push to Docker Hub
-#          command: ./dockerpush
+      - run:
+          name: Push to Docker Hub
+          command: ./dockerpush
