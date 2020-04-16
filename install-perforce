@@ -3,7 +3,9 @@
 apt-get update
 chmod +x p4d
 mv p4d /usr/local/bin
-adduser perforce
+chmod +x p4
+mv p4 /usr/local/bin
+adduser perforce --gecos "Perforce,User,0,0,0" --disabled-password
 mkdir /perforce_depot
 chown perforce /perforce_depot
 mkdir /var/log/perforce

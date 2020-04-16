@@ -7,4 +7,10 @@ services:
       dockerfile: Dockerfile
     image: docker-perforce
     ports:
-      - 5000:5000
+      - 1666:1666
+    environment:
+      - P4JOURNAL=/var/log/perforce/journal
+      - P4LOG=/var/log/perforce/p4err
+      - P4ROOT=/perforce_depot
+      - P4PORT=1666
+    command: /etc/init.d/p4dservice start
