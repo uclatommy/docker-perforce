@@ -11,6 +11,9 @@ chown perforce /perforce_depot
 mkdir /var/log/perforce
 chown perforce /var/log/perforce
 apt-get install daemon
-cd /etc/init.d
+mv p4dservice /etc/init.d
 chmod +x /etc/init.d/p4dservice
+ln -s /etc/init.d/p4dservice p4dservice
+chmod +x p4dservice
+cd /etc/init.d
 update-rc.d p4dservice defaults

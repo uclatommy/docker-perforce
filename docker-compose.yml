@@ -13,4 +13,4 @@ services:
       - P4LOG=/var/log/perforce/p4err
       - P4ROOT=/perforce_depot
       - P4PORT=1666
-    command: /etc/init.d/p4dservice start
+    command: /docker-perforce/p4dservice start

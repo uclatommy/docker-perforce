@@ -12,7 +12,6 @@ RUN wget ftp://ftp.perforce.com/perforce/r18.1/bin.linux26x86_64/p4
 COPY . /docker-perforce
 
 # Install Perforce
-COPY p4dservice /etc/init.d
 RUN chmod +x install-perforce
 RUN ./install-perforce
 
