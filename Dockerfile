@@ -15,5 +15,11 @@ COPY . /docker-perforce
 RUN chmod +x install-perforce
 RUN ./install-perforce
 
+# set environment variables
+ENV P4JOURNAL=/var/log/perforce/journal
+ENV P4LOG=/var/log/perforce/p4err
+ENV P4ROOT=/perforce_depot
+ENV P4PORT=1666
+
 # Make port 80 available to the world outside this container
 EXPOSE 1666

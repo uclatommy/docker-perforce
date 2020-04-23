@@ -18,7 +18,7 @@ docker-compose up
 If you intend to run from the prebuilt docker image:
 ```
 docker pull uclatommy/docker-perforce
-docker-compose up
+docker run -p 1666:1666 uclatommy/docker-perforce:0.1
 ```
 
 ## User setup
