@@ -4,7 +4,7 @@ FROM ubuntu:20.04
 WORKDIR /docker-perforce
 
 # Download Perforce server
-RUN apt-get update && apt-get -y install wget
+RUN apt-get update && apt-get -y install wget && apt-get -y install vim
 RUN wget ftp://ftp.perforce.com/perforce/r18.1/bin.linux26x86_64/p4d
 RUN wget ftp://ftp.perforce.com/perforce/r18.1/bin.linux26x86_64/p4
 

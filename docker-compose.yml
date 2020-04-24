@@ -12,5 +12,5 @@ services:
       - P4JOURNAL=/var/log/perforce/journal
       - P4LOG=/var/log/perforce/p4err
       - P4ROOT=/perforce_depot
-      - P4PORT=1666
+      - P4PORT=localhost:1666
     command: /docker-perforce/p4dservice start
