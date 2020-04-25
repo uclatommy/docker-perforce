@@ -18,7 +18,7 @@ docker-compose up
 If you intend to run from the prebuilt docker image:
 ```
 docker pull uclatommy/docker-perforce
-docker run -p 1666:1666 -e P4JOURNAL=/var/log/perforce/journal -e P4LOG=/var/log/perforce/p4err -e P4ROOT=/perforce_depot -e P4PORT=localhost:1666 --name perforce-server uclatommy/docker-perforce:0.1 /docker-perforce/p4dservice start
+docker run -p 1666:1666 -e P4JOURNAL=/var/log/perforce/journal -e P4LOG=/var/log/perforce/p4err -e P4ROOT=/perforce_depot -e P4PORT=localhost:1666 --name perforce-server --mount source=perforce-depot,destination=/perforce_depot uclatommy/docker-perforce:0.1 /docker-perforce/p4dservice start
 ```
 
 ## User setup

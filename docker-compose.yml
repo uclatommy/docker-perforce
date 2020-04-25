@@ -14,3 +14,8 @@ services:
       - P4ROOT=/perforce_depot
       - P4PORT=localhost:1666
     command: /docker-perforce/p4dservice start
+    volumes:
+      - perforce-depot:/perforce_depot
+
+volumes:
+  perforce-depot:
