@@ -1,6 +1,8 @@
 version: "3"
 services:
   p4d_svc:
+    volumes:
+      - perforce-depot:/perforce_depot
     container_name: perforce-server
     build:
       context: .
@@ -14,8 +16,7 @@ services:
       - P4ROOT=/perforce_depot
       - P4PORT=localhost:1666
     command: /docker-perforce/p4dservice start
-    volumes:
-      - perforce-depot:/perforce_depot
 
 volumes:
   perforce-depot:
+    external: true

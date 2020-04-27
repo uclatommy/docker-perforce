@@ -12,6 +12,7 @@ If you are building from source:
 ```
 git pull https://github.com/uclatommy/docker-perforce.git
 docker-compose build
+docker volume create --name=perforce-depot
 docker-compose up
 ```
 
